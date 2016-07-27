@@ -1,44 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Loop</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="bootstrap.min.js"></script>
-</head>
-<body data-spy="scroll" data-target=".navbar">
-
- <nav id="navigationContainer" class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#LoopNavBar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/index.html"><img src="/Images/dkb_finanzTransparentHighResolution.png" alt="LoopLogo" style="height:25px;">
-        </a>
+   <head>
+      <title>Loop</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="bootstrap.min.js"></script>
+   </head>
+   <body data-spy="scroll" data-target=".navbar">
+      <nav id="navigationContainer" class="navbar navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#LoopNavBar" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="/index.html"><img src="/Images/dkb_finanzTransparentHighResolution.png" alt="LoopLogo" style="height:25px;">
+               </a>
+            </div>
+            <div class="collapse navbar-collapse" id="LoopNavBar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a id="navLinks" class="navLinks" href="#ForGolfer">FOR GOLFERS</a></li>
+                  <li><a id="navLinks" class="navLinks" href="#ForCaddie" >FOR CADDIES</a></li>
+                  <li><a id="navLinks" class="navLinks" href="#About" >ABOUT</a></li>
+                  <li><a id="navLinks" class="navLinks" href="#" >CONTACT US</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div id="loopJumbo" class="jumbotron">
+         <h1 id="jumboLoopTitle">LOOP</h1>
+         <p id="jumboText" style="">Because every Golfer <br> deserves a Caddie</p>
+         <p><a class="btn btn-primary btn-lg" href="/signup.html" role="button">Sign Up</a></p>
       </div>
-    <div class="collapse navbar-collapse" id="LoopNavBar">
-      <ul class="nav navbar-nav navbar-right">
-      <li><a id="navLinks" class="navLinks" href="#ForGolfer">FOR GOLFERS</a></li>
-      <li><a id="navLinks" class="navLinks" href="#ForCaddie" >FOR CADDIES</a></li>
-      <li><a id="navLinks" class="navLinks" href="#About" >ABOUT</a></li>
-      <li><a id="navLinks" class="navLinks" href="#" >CONTACT US</a></li>
-    </ul>
-    </div>
-  </div>
-</nav>
-<div id="loopJumbo" class="jumbotron" style=" background-image:url(http://www.keatingpt.com/wp-content/uploads/2014/10/golf2.BW_.jpg)">
-  <h1 id="jumboLoopTitle">LOOP</h1>
-  <p id="jumboText" style="">Because every Golfer <br> deserves a Caddie</p>
-  <p><a class="btn btn-primary btn-lg" href="/signup.html" role="button">Sign Up</a></p>
-</div>
-<li class="divider"></li>
-</body>
+      <div id="ForGolfer" class="container">
+         <div class="row" style="">
+            <div class="col-md-3">
+               <div id="golferThumbnail" class="thumbnail">
+                  <img class="thumbnailImage" src="Images/timer.png" alt="...">
+                  <div class="caption">
+                     <h3>
+                        <center><span style="color:green; font-family:AvenirCN; font-size:60px">Faster</span></center>
+                     </h3>
+                     <p>
+                     <center style="font-family: AvenirLT; font-size: 30px;">Faster pace of play</center>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div id="golferThumbnail" class="thumbnail">
+                  <img class="thumbnailImage" src="Images/trash.png" alt="...">
+                  <div class="caption">
+                     <h3>
+                        <center><span style="color:green; font-family:AvenirCN; font-size:60px">Cleaner</span></center>
+                     </h3>
+                     <p>
+                     <center style="font-family: AvenirLT; font-size: 30px">Less time spent raking bunkers, filling divots, cleaning clubs, looking for golf balls or getting yardages</center>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div id="golferThumbnail" class="thumbnail">
+                  <img class="thumbnailImage" src="Images/eyeglasses.png" alt="...">
+                  <div class="caption">
+                     <h3>
+                        <center><span style="color:green; font-family:AvenirCN; font-size:60px">Smarter</span></center>
+                     </h3>
+                     <p>
+                     <center style="font-family: AvenirLT; font-size: 30px;">Greater confidence on the putting greens</center>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div id="golferThumbnail" class="thumbnail">
+                  <img class="thumbnailImage" src="Images/hand.png" alt="...">
+                  <div class="caption">
+                     <h3>
+                        <center><span style="color:green; font-family:AvenirCN; font-size:60px">Better</span></center>
+                     </h3>
+                     <p>
+                     <center style="font-family: AvenirLT; font-size: 30px;">More fun…all at the push of a button</center>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="border"></div>
+      </div>
+      <div id="ForCaddie" class="container">
+         <div style="height:500px"></div>
+     <div id="border"></div>
+          <div id="About" class="container">
+         <div style="height:500px"></div>
+      </div>
+   </body>
 </html>
-
