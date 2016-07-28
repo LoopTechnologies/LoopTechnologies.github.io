@@ -17,9 +17,9 @@
 
 #navigationContainerS{
     border-bottom: solid 1px #fff;
-    background-image:;
     height: 72px;
     margin: 0;
+    background-color: #fff;
 }
 
 loopNavBar{
@@ -94,7 +94,8 @@ loopNavBar{
     text-align: center;
     font-family: AvenirNext;
     font-size: 100px;
-    border-bottom: 1px solid gray;
+    color: #003300;
+    border-bottom: 1px solid #003300;
 }
 
 #signupContainer {
