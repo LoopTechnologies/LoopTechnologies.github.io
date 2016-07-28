@@ -1,55 +1,98 @@
 @font-face {
-    font-family: AvenirLT;
-    src: url(AvenirNextLTPro-UltLtCn.otf) format("opentype");
+    font-family: AvenirNextUL;
+    src: url('AvenirNextLTUltraLight.otf');
 }
 
 @font-face {
-    font-family: AvenirCN;
-    src: url(AvenirNextLTPro-UltLtCn.otf) format("opentype");
+    font-family: AvenirNext;
+    src: url('AvenirNextLTPro-Regular.otf');
 }
 
 #navigationContainer{
-    border-bottom: solid 1px gray; 
+    border-bottom: solid 1px #fff;
+    background-image: url(Images/Test3.jpg);
+    height: 72px;
+    margin: 0;
 }
 
-#loopNavBar{
- padding-left:15px;   
+#navigationContainerS{
+    border-bottom: solid 1px #fff;
+    background-image:;
+    height: 72px;
+    margin: 0;
 }
 
-#navLinks {
-    font-family: AvenirCN;
+loopNavBar{
+    padding-left:15px;
+    background-color: transparent;
+}
+@media (min-width: 700px) {
+.navbar .nav > li > a {
+    font-weight: 300;
+    padding-left: 50px;
+    padding-right: 50px;
+    color:  #fff;
     font-size: 15px;
-    color: gray;
+    padding-top: 25px;
+    margin: 0;
+    font-family:AvenirNext;
+    
+}
+}
+
+@media (max-width: 700px) {
+.navbar .nav > li > a {
+    font-weight: 300;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #fff;
+    font-size: 20px;
+    padding-top: 25px;
+    margin: 0;
+    text-align: center;
+    font-family:AvenirNext;
+}
 }
 
 #loopJumbo {
-    padding-top: 50px;
-    background-color:white;
+    padding-top: 260px;
+    background-color:#fff;
     background-repeat: no-repeat; 
     background-size: 100% 100%;
-    height: 600px;
+    height: 900px;
     text-align:center;
     margin: 0;
-    background-image: url("Images/Banner.jpg");
+    background-image: url("Images/Test21.jpg");
     background-size: cover;
+    top: -50px;
 }
 
+@media (min-width: 700px) {
 #jumboLoopTitle {
-    color:white; 
+    color:#fff; 
     font-size:120px; 
-    font-family:AvenirLT;
+    font-family:AvenirNextUL;
+}
 }
 
-#jumboText {
-    color: white; 
-    font-size:40px; 
-    font-family: AvenirLT;
+@media (max-width: 700px) {
+#jumboLoopTitle {
+    color:#fff; 
+    font-size:90px; 
+    font-family:AvenirNextUL;
+}
+}
+
+#jumboText{
+    color: #fff; 
+    font-size:30px; 
+    font-family: AvenirNext;
 }
 
 
 #signupHeader {
     text-align: center;
-    font-family: AvenirLT;
+    font-family: AvenirNext;
     font-size: 100px;
     border-bottom: 1px solid gray;
 }
@@ -62,6 +105,16 @@
         overflow:auto;
 }
 
+#signUpButton
+{
+    background-color: #003300;
+    width: 300px;
+    border-radius: 25px;
+    border-color: #fff;
+    border-width: 1px;
+    font-family: AvenirNext;
+    font-size: 20px;
+}
 .signupText{
         left:0; right:0;
         margin:auto;
@@ -129,14 +182,14 @@
     background: url(/Images/AboutLeft.jpg);
     opacity: .5;
     background-size: cover;
-    font-family: AvenirCN;
-    color: black;
+    font-family: AvenirNext;
+    color: #2c2e2f;
     
 }
 
 #AboutText {
     font-size: 30px;
-    font-family: AvenirLT;
+    font-family: AvenirNext;
 }
 
 .homeSection {
