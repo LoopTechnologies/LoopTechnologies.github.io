@@ -6,11 +6,23 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+      </script>
       <script src="bootstrap.min.js"></script>
+       <script>
+    $(window).scroll(function() {
+    if($(this).scrollTop() > 150)  /*height in pixels when the navbar becomes non opaque*/ 
+    {
+        $('#navigationContainer').hide();
+    } else {
+        $('#navigationContainer').show();
+    }
+
+});
+       </script>
    </head>
    <body data-spy="scroll" data-target=".navbar">
-    <nav id="navigationContainer" class="navbar navbar-default navbar-static-top">
+    <nav id="navigationContainer" class="navbar transparent navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#LoopNavBar" aria-expanded="false">
@@ -23,7 +35,7 @@
         </a>
       </div>
     <div class="collapse navbar-collapse" id="LoopNavBar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-center">
       <li><a class="navLinks" href="#ForGolfer">FOR GOLFERS</a></li>
       <li><a class="navLinks" href="#ForCaddie" >FOR CADDIES</a></li>
       <li><a class="navLinks" href="#About" >ABOUT</a></li>
@@ -38,66 +50,80 @@
          <p><a id="signUpButton" class="btn btn-primary btn-lg" href="/signup.html" role="button">Sign Up</a></p>
       </div>
       <div id="ForGolfer" class="container">
+          <div class="container"><h2 id="ForGolferHeader">Make your next round...</h2></div>
          <div class="row" style="">
             <div class="col-md-3">
                <div id="golferThumbnail" class="thumbnail">
-                  <img class="thumbnailImage" src="Images/timer.png" alt="...">
+                  <img class="thumbnailImage" src="Images/timer-silhouette-variant.png" alt="...">
                   <div class="caption">
                      <h3>
-                        <center><span style="color:green; font-family:AvenirNext; font-size:60px">Faster</span></center>
+                        <center><span class="ForGolferHeaders">Faster</span></center>
                      </h3>
                      <p>
-                     <center style="font-family: AvenirNext; font-size: 30px;">Faster pace of play</center>
+                     <center class="ForGolferText">Faster pace of play</center>
                      </p>
                   </div>
                </div>
             </div>
             <div class="col-md-3">
                <div id="golferThumbnail" class="thumbnail">
-                  <img class="thumbnailImage" src="Images/trash.png" alt="...">
+                  <img class="thumbnailImage" src="Images/dust-pan-and-broom.png" alt="...">
                   <div class="caption">
                      <h3>
-                        <center><span style="color:green; font-family:AvenirNext; font-size:60px">Cleaner</span></center>
+                        <center><span class="ForGolferHeaders">Cleaner</span></center>
                      </h3>
                      <p>
-                     <center style="font-family: AvenirNext; font-size: 30px">Less time spent raking bunkers, filling divots, cleaning clubs, looking for golf balls or getting yardages</center>
+                     <center class="ForGolferText">Less time spent raking bunkers, filling divots, cleaning clubs, looking for golf balls or getting yardages</center>
                      </p>
                   </div>
                </div>
             </div>
             <div class="col-md-3">
                <div id="golferThumbnail" class="thumbnail">
-                  <img class="thumbnailImage" src="Images/eyeglasses.png" alt="...">
+                  <img class="thumbnailImage" src="Images/open-and-close-brackets-enclosing-a-hexagon.png" alt="...">
                   <div class="caption">
                      <h3>
-                        <center><span style="color:green; font-family:AvenirNext; font-size:60px">Smarter</span></center>
+                        <center><span class="ForGolferHeaders">Smarter</span></center>
                      </h3>
                      <p>
-                     <center style="font-family: AvenirNext; font-size: 30px;">Greater confidence on the putting greens</center>
+                     <center class="ForGolferText">Greater confidence on the putting greens</center>
                      </p>
                   </div>
                </div>
             </div>
             <div class="col-md-3">
                <div id="golferThumbnail" class="thumbnail">
-                  <img class="thumbnailImage" src="Images/hand.png" alt="...">
+                  <img class="thumbnailImage" src="Images/golf-caddy-and-flag.png" alt="...">
                   <div class="caption">
                      <h3>
-                        <center><span style="color:green; font-family:AvenirNext; font-size:60px">Better</span></center>
+                        <center><span class="ForGolferHeaders">Better</span></center>
                      </h3>
                      <p>
-                     <center style="font-family: AvenirNext; font-size: 30px;">More fun…all at the push of a button</center>
+                     <center class="ForGolferText">More fun…all at the push of a button</center>
                      </p>
                   </div>
                </div>
             </div>
          </div>
-         <div id="border"></div>
       </div>
       <div id="ForCaddie" class="container">
-         <div style="height:500px"><img src="Images/iOSLandingPageMockup.png" style="height:400px; float:left; margin:0;"></div>
+          <div id="ForCaddieHeader" class="container"><div class="page-header"> <a href="signup.html" style=" text-decoration: none; color: #2c2e2f"><h2>Become a LOOP Certified Caddie</h2></a></div> </div>
+          
+          
+          <div class="col-md-4" style="text-align: center"><img class="img-fluid" src="Images/iOSLandingPageMockup.png" style="height:400px; margin:0; : 50px;"></div>
+           
+          <div id="forCaddiesText" class="col-md-4">
+              <h3>Pick your schedule</h3>
+              <p> Choose when you work</p>
+              <h3>Show them what you've got</h3>
+              <p> Work with the area's top golf professionals</p>
+              <h3> </h3>
+          </div>
+          
+       
+       </div>
      <div id="border"></div>
-          <div id="About" class="container">
+    <div id="About" class="container">
          <div style="height:500px"></div>
       </div>
    </body>

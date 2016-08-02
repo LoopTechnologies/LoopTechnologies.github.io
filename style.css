@@ -8,11 +8,16 @@
     src: url('AvenirNextLTPro-Regular.otf');
 }
 
+.page-header {
+    font-family: AvenirNext;
+    
+}
 #navigationContainer{
     border-bottom: solid 1px #fff;
-    background-image: url(Images/Test3.jpg);
+    background: rgba(0,0,0,0.1);
     height: 72px;
     margin: 0;
+    text-align: center;
 }
 
 #navigationContainerS{
@@ -22,10 +27,6 @@
     background-color: #fff;
 }
 
-loopNavBar{
-    padding-left:15px;
-    background-color: transparent;
-}
 @media (min-width: 700px) {
 .navbar .nav > li > a {
     font-weight: 300;
@@ -36,6 +37,8 @@ loopNavBar{
     padding-top: 25px;
     margin: 0;
     font-family:AvenirNext;
+    float: none;
+      display: inline-block;
     
 }
 }
@@ -51,6 +54,8 @@ loopNavBar{
     margin: 0;
     text-align: center;
     font-family:AvenirNext;
+    float: none;
+      display: inline-block;
 }
 }
 
@@ -62,9 +67,9 @@ loopNavBar{
     height: 900px;
     text-align:center;
     margin: 0;
-    background-image: url("Images/Test21.jpg");
+    background-image: url("Images/Test5.jpg");
     background-size: cover;
-    top: -50px;
+    
 }
 
 @media (min-width: 700px) {
@@ -126,31 +131,61 @@ loopNavBar{
 #border {
     text-align: center;width:85%; 
     margin: 0 auto;
-    border-bottom: solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
 }
 
 .thumbnailImage {
      height: 128px;
      width: 128px;
 }
+#ForGolferHeader {
+    font-family: AvenirNext;
+    padding-bottom: 30px;
+    text-align:center;
+    font-size: 36px;
+    color: #2c2e2f;
+}
 
 #ForGolfer {
-    padding-top: 50px;
+    padding: 0px;
     width: 100%;
-    background-color: #EBEBEB;
+    background-color: #f8f8f8;
+}
+
+.ForGolferText {
+    color: #2c2e2f;
+    font-family: AvenirNext; 
+    font-size: 18px;   
+}
+
+.ForGolferHeaders {
+    color:#2c2e2f; 
+    font-family:AvenirNext;
+    font-size:25px;
 }
 
 #golferThumbnail {
- background-color: #EBEBEB;
+ background-color: #f8f8f8;
     border: 0 none;
     box-shadow: none;
     
 }
 
-#ForCaddie {
-    padding-top: 50px;
+#ForCaddieHeader{
     width: 100%;
-    background-color: #EBEBEB;
+    text-align: center;
+    background-color: #fff; 
+}
+
+#forCaddiesText {
+    Font-Family: AvenirNext;
+    color: #2c2e2f;
+}
+
+#ForCaddie {
+    padding: 0px;
+    width: 100%;
+    background-color: #fff;
 }
 .flex-row .thumbnail,
 .flex-row .caption {
@@ -167,6 +202,8 @@ loopNavBar{
 
 #About {
     padding-top: 50px;
+    margin-left:0px;
+    
     width: 100%;
     background-color: #EBEBEB;
 }
