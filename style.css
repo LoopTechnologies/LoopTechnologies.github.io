@@ -190,6 +190,26 @@
     background-color: #fff;
     text-align: center;
 }
+
+@media (min-width: 700px) {
+#mobileForCaddies {
+    display:none;
+}
+}
+
+@media (max-width: 700px) {
+#mobileForCaddies {
+    color: black; 
+    font-family:AvenirNext;
+}
+}
+
+@media (max-width: 700px) {
+#signForCaddies {
+    display:none;
+}
+}
+
 .flex-row .thumbnail,
 .flex-row .caption {
     display: flex;
