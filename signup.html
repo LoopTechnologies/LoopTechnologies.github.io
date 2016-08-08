@@ -28,35 +28,24 @@
     <br>
     <br>
     <div id="signupHeader"> <p> Join Loop</p></div>
-    <br>
-    <div id="signupContainer" class="container">
-    <p class="signupText">Email:</p>
-    <div class="input-group">
-  <input id="EmailAddressF" type="text" class="form-control" placeholder="Email Address (Username)" aria-describedby="basic-addon2">
-  <span class="input-group-addon" id="basic-addon2">@example.com</span>
-</div>    
-    </div>
-    <br>
-<div class="container">
-    <p class="signupText">Retype Email:</p>
-    <div class="input-group">
-  <input id="EmailAddressS" type="text" class="form-control" placeholder="Email Address (Username)" aria-describedby="basic-addon2">
-  <span class="input-group-addon" id="basic-addon2">@example.com</span>
-</div>    
-    </div>
-    <br>
-<div class="container">
-    <p class="signupText">First Name:</p>
-    <input id="FirstName" type="text" class="form-control">
-    </div>
-<div>
-    <br>
-<div class="container">
-    <p class="signupText">Last Name:</p>
-    <input id="Last Name" type="text" class="form-control">
-    </div>
-<div> 
+    <div id="signUpBackground" class="container">
+    <div id="signUpDiv" class="container">
+    <label for="InputEmail1">Email address:</label>
+    <input type="email" class="form-control" id="InputEmail1" placeholder="Email">
+    <label for="InputEmail2">Retype Email address:</label>
+    <input type="email" class="form-control" id="InputEmail2" placeholder="Retype Email">
+    <label for="InputFirstName">First Name:</label>
+    <input type="firstname" class="form-control" id="InputFirstName" placeholder="First Name"> 
+    <label for="InputLastName">Last Name:</label>
+    <input type="lastname" class="form-control" id="InputLastName" placeholder="Last Name">
+    
+    <label for="InputType" style="padding-top: 10px">What's your classification (Pick all that apply) :</label>
+    <label class="checkbox-inline"><input id="InputType1" type="checkbox" value="">Caddie</label>
+    <label class="checkbox-inline"><input id="InputType2" type="checkbox" value="">Golfer</label>
+    
     
     </div>
+        <p style="text-align:center; padding-top: 20px"><a id="signUpButton" class="btn btn-primary btn-lg" href="/signup.html" role="button">Create Account</a></p>
+        </div>
     </body>
 </html>
