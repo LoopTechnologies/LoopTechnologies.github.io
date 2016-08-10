@@ -136,7 +136,7 @@
     padding-bottom: 30px;
     border: 1px solid #d2d2d2;
     border-radius: 25px;
-    width: 500px;
+    width: 300px;
     
 }
 
@@ -521,3 +521,7 @@
         font-size: 13px;
     }
 }
+@media (max-width: 400px){
+footer {
+    display: none;
+}}

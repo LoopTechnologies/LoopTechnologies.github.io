@@ -6,8 +6,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+   </script>
   <script src="bootstrap.min.js"></script>
+    <script>     
+    </script>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAnJDjqikwmm413EshWiC6MVCMKNfN8VmU",
+    authDomain: "project-8796477348667998661.firebaseapp.com",
+    databaseURL: "https://project-8796477348667998661.firebaseio.com",
+    storageBucket: "project-8796477348667998661.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+    
+<script>
+  // Initialize Firebase
+function Reset() {
+    document.getElementById("InputPassword1Label").style.color = "black";
+    document.getElementById("InputPassword2Label").style.color = "black";
+    document.getElementById("incorrect").style.display = "none";
+    document.getElementById("InputEmail1Label").style.color = "black";
+    document.getElementById("InputEmail2Label").style.color = "black";
+}
+function VerifyEmailAddress() {
+    Reset();
+var email1 = document.getElementById("InputEmail1").value;
+var email2 = document.getElementById("InputEmail2").value;
+var password1 = document.getElementById("InputPassword1").value;
+var password2 = document.getElementById("InputPassword2").value;
+var firstName = document.getElementById("InputFirstName").value;
+var lastName = document.getElementById("InputLastName").value;
+var VarCaddie = document.getElementById('InputType1').checked;
+var VarGolfer = document.getElementById('InputType2').checked;
+if (password1.length == 0 || password2.length == 0)
+{
+    document.getElementById("incorrect").innerHTML = "Password not strong enough. Try again!";
+    document.getElementById("InputPassword1Label").style.color = "red";
+    document.getElementById("InputPassword2Label").style.color = "red";
+    document.getElementById("incorrect").style.display = "block";  
+}
+else if((email1 == email2) && (password1 == password2)){
+    firebase.auth().signInWithEmailAndPassword(email1, password1).catch(function(error){
+        if(error.code == 'auth/user-not-found'){
+        var newKey = firebase.database().ref().child('Users').push().key;
+       firebase.database().ref('/Users/' + newKey).set({
+            Caddie: VarCaddie,
+            Golfer: VarGolfer,
+            First_Name: firstName,
+            Last_Name : lastName,
+            Lifetime_Rounds: "0",
+            Loop_Credit: "0",
+            Password: password1,
+            Email: email1
+          });
+        
+        
+        }
+        else if(error.code == 'auth/wrong-password') {
+         document.getElementById("incorrect").innerHTML = "Email address already exists!";
+    document.getElementById("incorrect").style.display = "block";  
+        }else if(error.code == 'auth/invalid-email') {
+         document.getElementById("incorrect").innerHTML = "Incorrect email. ex: 'name@email.com'";
+    document.getElementById("incorrect").style.display = "block"; 
+    document.getElementById("InputEmail1Label").style.color = "red";
+    document.getElementById("InputEmail2Label").style.color = "red";
+        }
+        
+    });
+}
+   // var newUserKey = firebase.database().ref().child('Users').push().key;
+
+
+else if (email1 != email2){
+    document.getElementById("InputPassword1Label").style.color = "black";
+    document.getElementById("InputPassword2Label").style.color = "black";
+    document.getElementById("incorrect").innerHTML = "Please verify email address are the same";
+    document.getElementById("incorrect").style.display = "block";
+    document.getElementById("InputEmail1Label").style.color = "red";
+    document.getElementById("InputEmail2Label").style.color = "red";
+} else {
+    document.getElementById("InputEmail1Label").style.color = "black";
+    document.getElementById("InputEmail2Label").style.color = "black";
+    document.getElementById("incorrect").innerHTML = "Please verify passwords are the same";
+    document.getElementById("incorrect").style.display = "block";
+    document.getElementById("InputPassword1Label").style.color = "red";
+    document.getElementById("InputPassword2Label").style.color = "red";
+
+}
+}
+</script>
+
 </head>
 <body data-spy="scroll" data-target=".navbar">
    <nav id="navigationContainerS" class="navbar navbar-default navbar-static-top">
@@ -30,22 +124,32 @@
     <div id="signupHeader"> <p> Join Loop</p></div>
     <div id="signUpBackground" class="container">
     <div id="signUpDiv" class="container">
-    <label for="InputEmail1">Email address:</label>
+    <label id="incorrect" style="color:red; display: none;" ><i>Please verify email address are the same</i></label>
+        <br>
+    <label id="InputEmail1Label" for="InputEmail1">Email address:</label>
     <input type="email" class="form-control" id="InputEmail1" placeholder="Email">
-    <label for="InputEmail2">Retype Email address:</label>
+    <label id="InputEmail2Label" for="InputEmail2">Retype Email address:</label>
     <input type="email" class="form-control" id="InputEmail2" placeholder="Retype Email">
+    <label id="InputPassword1Label" for="InputPassword1">Password:</label>
+    <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+    <label id="InputPassword2Label" for="InputPassword2">Retype Password:</label>
+    <input type="password" class="form-control" id="InputPassword2" placeholder="Retype Password">
     <label for="InputFirstName">First Name:</label>
     <input type="firstname" class="form-control" id="InputFirstName" placeholder="First Name"> 
     <label for="InputLastName">Last Name:</label>
     <input type="lastname" class="form-control" id="InputLastName" placeholder="Last Name">
     
-    <label for="InputType" style="padding-top: 10px">What's your classification (Pick all that apply) :</label>
-    <label class="checkbox-inline"><input id="InputType1" type="checkbox" value="">Caddie</label>
+    <label for="InputType" style="padding-top: 10px; width: 100%; text-align: center">What's your classification <br />(Pick all that apply) :</label><br/>
+    <div class="container" style="width:100%; text-align: center">
+        <label class="checkbox-inline"><input id="InputType1" type="checkbox" value="">Caddie</label>
     <label class="checkbox-inline"><input id="InputType2" type="checkbox" value="">Golfer</label>
-    
+    </div>
     
     </div>
-        <p style="text-align:center; padding-top: 20px"><a id="signUpButton" class="btn btn-primary btn-lg" href="/signup.html" role="button">Create Account</a></p>
+        <p style="text-align:center; padding-top: 20px"><a id="signUpButton" class="btn btn-primary btn-lg" onclick="VerifyEmailAddress()" role="button">Create Account</a></p>
         </div>
+    <footer class="site-footer" style=" position: absolute;right: 0;bottom: 0;left: 0;padding: 1rem;background-color: #fff;font-family:AvenirNext; font-size: 10px">
+    <p>	&copy; 2016 Loop Technologies LLC</p>   
+    </footer>
     </body>
 </html>
