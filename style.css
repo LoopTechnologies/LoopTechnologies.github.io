@@ -243,15 +243,13 @@
 }
 
 #About {
-    border-top:1.5px solid #2c2e2f;
     padding-top: 50px;
     margin-left:0px;
-    background-color: black;
-    height: 700px;
+    background-color: #f8f8f8;
     margin: 0px;
-    padding: 0px;
+    padding: 30px;
     width: 100%;
-    //background-color: #EBEBEB;
+    //=background-color: #EBEBEB;
 }
 #aboutHeader {
     height:100%;
@@ -277,12 +275,13 @@
 }
 
 
-@media (max-width: 700px) {
+/*@media (max-width: 700px) {*/
  #giantPhone {
-   display:none;   
+     width: 236px;
+     height: 480px;
  }
     
-}
+/*}*/
 .homeSection {
     height: 600px;
     width: 100%;
